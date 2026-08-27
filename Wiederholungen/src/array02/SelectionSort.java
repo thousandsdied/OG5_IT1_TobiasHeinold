@@ -20,7 +20,9 @@ public class SelectionSort {
 				
 			}
 			
-			if(i!=a.length) {
+			if(a[i]>a[curMin]) {
+				
+				System.out.println("test");
 			
 				int temp=a[i];
 				

@@ -10,7 +10,7 @@ public class Sum02 {
 		
 		System.out.print("Grenzwert eingeben: ");
 		
-		int grenzwert = Integer.parseInt(scanner.nextLine());
+		int grenzwert = scanner.nextInt();
 		
 		int endwert=0;
 		

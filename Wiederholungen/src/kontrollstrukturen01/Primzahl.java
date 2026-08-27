@@ -10,7 +10,7 @@ public class Primzahl {
 		
 		System.out.print("Bitte geben sie die zu ueberpruefende Zahl ein: ");
 
-		long zahl = Long.parseLong(scanner.nextLine());
+		long zahl = scanner.nextLong();
 		
 		boolean prim = true;
 		

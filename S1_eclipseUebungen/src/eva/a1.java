@@ -1,19 +1,19 @@
 package eva;
-import java.io.*;
 
+import java.util.Scanner;
 
 public class a1 {
 	
 	private static String text = "";
 	
-	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static Scanner scanner = new Scanner(System.in);;
 	
 	public static void main(String[] args) {
 	
 	System.out.println("Bitte Wort eingeben");	
 		
 	try {
-		 text = br.readLine();
+		 text = scanner.nextLine();
       } catch (Exception e){
     	  
       }

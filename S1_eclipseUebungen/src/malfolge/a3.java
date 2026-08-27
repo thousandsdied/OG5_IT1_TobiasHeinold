@@ -1,11 +1,10 @@
 package malfolge;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class a3 {
 
-	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static Scanner scanner = new Scanner(System.in);
 	
 	private static int zahl = 0;
 	
@@ -15,11 +14,11 @@ public class a3 {
 		
 		try {
 			
-			zahl=Integer.parseInt(br.readLine());
+			zahl=scanner.nextInt();
 			
 		}catch(Exception e) {}
 		
-		
+	
 		for (int i = 0 ; i<=10 ; i++) {
 			
 			System.out.println(i + " * " + zahl + " = " + zahl*i);

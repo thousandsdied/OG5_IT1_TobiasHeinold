@@ -10,11 +10,11 @@ public class QuotSub {
 		
 		System.out.print("Divident: ");
 		
-		int divident=Integer.parseInt(scanner.nextLine());
+		int divident=scanner.nextInt();
 
 		System.out.print("Divisor: ");
 		
-		int divisor=Integer.parseInt(scanner.nextLine());
+		int divisor=scanner.nextInt();
 		
 		int quotient=0;
 		

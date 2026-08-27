@@ -12,11 +12,11 @@ public class Groﬂhaendler01 {
 		
 		System.out.print("Bitte Anzahl der M‰use eingeben: ");
 		
-		 maus = Integer.parseInt(scanner.nextLine());
+		 maus = scanner.nextInt();
 		
 		System.out.print("Bitte Einzelpreis eingeben: ");
 		
-		einzelpreis = Double.parseDouble(scanner.nextLine());
+		einzelpreis = scanner.nextDouble();
 		
 		gesamtpreis=maus*einzelpreis*1.19;
 		

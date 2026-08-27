@@ -1,11 +1,10 @@
 package mensa;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class a2 {
 
-	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static Scanner scanner = new Scanner(System.in);
 	
 	private static float pom=0f;
 	private static float dur=0f;
@@ -17,15 +16,14 @@ public class a2 {
 		
 		try {
 			
-			pom=Float.parseFloat(br.readLine());
-			
+			pom=scanner.nextFloat();
 		}catch(Exception e) {}
 		
 		System.out.print("Anzal der Durstlöcher: ");
 		
 		try {
 			
-			dur=Float.parseFloat(br.readLine());
+			dur=scanner.nextFloat();
 			
 		}catch(Exception e) {}
 

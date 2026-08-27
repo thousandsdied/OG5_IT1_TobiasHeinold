@@ -1,12 +1,10 @@
 package dna;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class a5 {
 
-	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	
+	static Scanner scanner = new Scanner(System.in);
 	private static String input="";
 	
 	public static void main(String[] args) {
@@ -16,7 +14,7 @@ public class a5 {
 			
 			try {
 				
-				input=br.readLine();
+				input=scanner.nextLine();
 				
 			}catch(Exception e) {}
 			

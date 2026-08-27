@@ -10,11 +10,11 @@ public class BMI {
 		
 		System.out.println("Gewicht in kg: ");
 		
-		double gewicht = Double.parseDouble(scanner.nextLine());
+		double gewicht = scanner.nextDouble();
 		
 		System.out.println("Groesse in cm: ");
 		
-		double groesse = Double.parseDouble(scanner.nextLine());
+		double groesse = scanner.nextDouble();
 		
 		String geschlecht = "";
 		

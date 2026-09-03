@@ -37,7 +37,7 @@ public class TaschenrechnerTest {
 			System.out.println(i+" + "+e+" = "+ts.add(i, e));
 			break;
 		case '2':
-			System.out.print("Minnuend: ");
+			System.out.print("Minuend: ");
 			i = myScanner.nextInt();
 			System.out.print("Subtrahend: ");
 			e = myScanner.nextInt();

@@ -22,7 +22,7 @@ public class MyActionListener implements ActionListener {
 		}
 		
 		if (obj == f.btnVerbrauchen) {
-			 fuellstand = fuellstand - 2;
+			 fuellstand = fuellstand - f.getVerbrauchSliderValue();
 			
 		}
 		

@@ -9,6 +9,7 @@ import java.awt.Label;
 import java.awt.Panel;
 
 import javax.swing.JProgressBar;
+import javax.swing.JSlider;
 
 @SuppressWarnings("serial")
 public class TankSimulator extends Frame {
@@ -28,6 +29,8 @@ public class TankSimulator extends Frame {
 	private Panel pnlSouth = new Panel(new GridLayout(1, 0));
 	
 	private JProgressBar fuellstandBar = new JProgressBar(0,0,200);
+	
+	private JSlider verbrauchSlider = new JSlider(1,4,2);
 
 	private MyActionListener myActionListener = new MyActionListener(this);
 
@@ -40,6 +43,7 @@ public class TankSimulator extends Frame {
 		this.pnlNorth.add(this.lblUeberschrift);
 		this.pnlCenter.add(this.lblFuellstand);
 		this.pnlCenter.add(this.fuellstandBar);
+		this.pnlCenter.add(this.verbrauchSlider);
 		this.pnlSouth.add(this.btnEinfuellen);
 		this.pnlSouth.add(this.btnVerbrauchen);
 		this.pnlSouth.add(this.btnZuruecksetzen);
@@ -60,6 +64,12 @@ public class TankSimulator extends Frame {
 	public JProgressBar getFuellstandBar() {
 		
 		return fuellstandBar;
+		
+	}
+	
+	public int getVerbrauchSliderValue() {
+		
+		return verbrauchSlider.getValue();
 		
 	}
 

@@ -32,7 +32,7 @@ public class MyActionListener implements ActionListener {
 		}
 
 		 f.myTank.setFuellstand(fuellstand);
-		
+		 f.getFuellstandBar().setValue((int)fuellstand);
 		 f.lblFuellstand.setText(""+fuellstand+"("+fuellstand/2+"%)");
 		
 	}

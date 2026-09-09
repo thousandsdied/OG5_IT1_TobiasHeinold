@@ -8,6 +8,8 @@ import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.Panel;
 
+import javax.swing.JProgressBar;
+
 @SuppressWarnings("serial")
 public class TankSimulator extends Frame {
 	
@@ -24,6 +26,8 @@ public class TankSimulator extends Frame {
 	private Panel pnlNorth = new Panel();
 	private Panel pnlCenter = new Panel(new FlowLayout());
 	private Panel pnlSouth = new Panel(new GridLayout(1, 0));
+	
+	private JProgressBar fuellstandBar = new JProgressBar(0,0,200);
 
 	private MyActionListener myActionListener = new MyActionListener(this);
 
@@ -35,6 +39,7 @@ public class TankSimulator extends Frame {
 		this.lblUeberschrift.setFont(new Font("", Font.BOLD, 16));
 		this.pnlNorth.add(this.lblUeberschrift);
 		this.pnlCenter.add(this.lblFuellstand);
+		this.pnlCenter.add(this.fuellstandBar);
 		this.pnlSouth.add(this.btnEinfuellen);
 		this.pnlSouth.add(this.btnVerbrauchen);
 		this.pnlSouth.add(this.btnZuruecksetzen);
@@ -50,6 +55,12 @@ public class TankSimulator extends Frame {
 		this.btnVerbrauchen.addActionListener(myActionListener);
 		this.btnZuruecksetzen.addActionListener(myActionListener);
 		this.btnBeenden.addActionListener(myActionListener);
+	}
+	
+	public JProgressBar getFuellstandBar() {
+		
+		return fuellstandBar;
+		
 	}
 
 	public static void main(String argv[]) {

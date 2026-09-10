@@ -7,7 +7,9 @@ import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.Panel;
+import java.awt.ScrollPane;
 
+import javax.swing.BoxLayout;
 import javax.swing.JProgressBar;
 import javax.swing.JSlider;
 
@@ -27,10 +29,13 @@ public class TankSimulator extends Frame {
 	private Panel pnlNorth = new Panel();
 	private Panel pnlCenter = new Panel(new FlowLayout());
 	private Panel pnlSouth = new Panel(new GridLayout(1, 0));
+	private Panel historiePanel = new Panel();
 	
 	private JProgressBar fuellstandBar = new JProgressBar(0,0,200);
 	
 	private JSlider verbrauchSlider = new JSlider(1,4,2);
+	
+	private ScrollPane historieScroller = new ScrollPane();
 
 	private MyActionListener myActionListener = new MyActionListener(this);
 
@@ -38,12 +43,15 @@ public class TankSimulator extends Frame {
 		super("Tank-Simulator");
 		
 		myTank = new Tank(0);
-		
+		historiePanel.setLayout(new BoxLayout(historiePanel, BoxLayout.Y_AXIS));
 		this.lblUeberschrift.setFont(new Font("", Font.BOLD, 16));
+		historieScroller.setSize(500,500);
+		historieScroller.add(historiePanel);
 		this.pnlNorth.add(this.lblUeberschrift);
 		this.pnlCenter.add(this.lblFuellstand);
 		this.pnlCenter.add(this.fuellstandBar);
 		this.pnlCenter.add(this.verbrauchSlider);
+		this.pnlCenter.add(historieScroller);
 		this.pnlSouth.add(this.btnEinfuellen);
 		this.pnlSouth.add(this.btnVerbrauchen);
 		this.pnlSouth.add(this.btnZuruecksetzen);
@@ -70,6 +78,12 @@ public class TankSimulator extends Frame {
 	public int getVerbrauchSliderValue() {
 		
 		return verbrauchSlider.getValue();
+		
+	}
+	
+	public Panel getHistoriePanel() {
+		
+		return historiePanel;
 		
 	}
 

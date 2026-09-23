@@ -6,9 +6,9 @@ public class Haustier {
 		
 	private String name;
 	
-	public Haustier() {}
+	public Haustier() {hunger=muede=zufrieden=gesund=100;}
 	
-	public Haustier(String name) {this.name=name;}
+	public Haustier(String name) {this.name=name; hunger=muede=zufrieden=gesund=100;}
 	
 	public int getHunger(){return hunger;}
 	
@@ -20,13 +20,13 @@ public class Haustier {
 	
 	public String getName(){return name;}
 	
-	public void setHunger(int hunger) {this.hunger = hunger;}
+	public void setHunger(int hungerNeu) {this.hunger = hungerNeu; if(hunger>100) {hunger=100;} if(hunger<0) {hunger=0;}}
 	
-	public void setMuede(int muede) {this.muede = muede;}
+	public void setMuede(int muedeNeu) {this.muede = muedeNeu; if(muede>100) {muede=100;} if(muede<0) {muede=0;}}
 	
-	public void setZufrieden(int zufrieden) {this.zufrieden = zufrieden;}
+	public void setZufrieden(int zufriedenNeu) {this.zufrieden = zufriedenNeu; if(zufrieden>100) {zufrieden=100;} if(zufrieden<0) {zufrieden=0;}}
 	
-	public void setGesund(int gesund) {this.gesund = gesund;}
+	public void setGesund(int gesundNeu) {this.gesund = gesundNeu; if(gesund>100) {gesund=100;} if(gesund<0) {gesund=0;}}
 	
 	public void setName(String name) {this.name = name;}
 	

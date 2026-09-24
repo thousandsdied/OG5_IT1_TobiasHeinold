@@ -6,22 +6,18 @@ package de.oszimt.starsim2099;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Pilot {
+public class Pilot extends Raumobjekt{
 
 	// Attribute
-	
-	private double posX,posY;
 	private String grad,name;
 	
 	// Methoden
-
-	public double getPosX(){return posX;}
-	public double getPosY(){return posY;}
+	
+	public Pilot() {}
+	
 	public String getGrad(){return grad;}
 	public String getName(){return name;}
 	
-	public void setPosX(double posX){this.posX=posX;}
-	public void setPosY(double posY){this.posY=posY;}
 	public void setGrad(String grad){this.grad=grad;}
 	public void setName(String name){this.name=name;}
 	

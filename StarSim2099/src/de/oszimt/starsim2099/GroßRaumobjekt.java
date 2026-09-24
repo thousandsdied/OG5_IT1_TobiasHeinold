@@ -10,4 +10,6 @@ public class GroßRaumobjekt extends Raumobjekt{
 	
 	public void setName(String name) {this.name=name;}
 	
+	public void setArt(String art) {this.art=art;}
+	
 }

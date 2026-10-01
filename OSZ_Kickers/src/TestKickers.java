@@ -28,7 +28,8 @@ public class TestKickers {
 		spieler02.setPosition("Defensives Mittelfeld");
 		spieler02.setTrikotnummer(6);
 		spieler02.setMannschaft("FC Mayern Bünchen");
-		
+		spieler02.setRabatt(0.03);
+		spieler02.setJahresbeitragBezahlt(true);
 		
 		Mitglied[] mitglieder = {spieler01,spieler02,trainer01,schiri01};
 		

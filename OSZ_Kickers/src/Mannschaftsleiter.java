@@ -16,6 +16,8 @@ public class Mannschaftsleiter extends Spieler{
 		this.rabatt = rabatt;
 	}
 	
-	public Mannschaftsleiter() {};
+	public Mannschaftsleiter() {
+		leitendeMannschaft=new Mannschaft();
+	};
 	
 }

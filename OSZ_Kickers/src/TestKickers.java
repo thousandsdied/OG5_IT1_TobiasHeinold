@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class TestKickers {
 
 	public static void main(String[] args) {
@@ -14,6 +16,8 @@ public class TestKickers {
 		spieler01.setJahresbeitragBezahlt(false);
 		spieler01.setMannschaft(mannschaft01);
 		
+		mannschaft01.addToKader(spieler01);
+		
 		Trainer trainer01 = new Trainer();
 		trainer01.setName("Logi Yöw");
 		trainer01.setTelefonnr("+49 12345678");
@@ -21,6 +25,8 @@ public class TestKickers {
 		trainer01.setAufwantsentschaedigung(400);
 		trainer01.setJahresbeitragBezahlt(true);
 		trainer01.addToMannschaften(mannschaft01);
+		
+		mannschaft01.setTrainer(trainer01);
 		
 		Schiedsrichter schiri01 = new Schiedsrichter();
 		schiri01.setName("Ennis Daytekin");
@@ -38,25 +44,45 @@ public class TestKickers {
 		spieler02.setRabatt(0.03);
 		spieler02.setJahresbeitragBezahlt(true);
 		
+		mannschaft01.addToKader(spieler02);
+		
 		Spiel spiel01 = new Spiel();
 		spiel01.setDatum("1.10.26");
 		spiel01.setErgebnis("4:0");
 		spiel01.setHeimGast("Heim");
-		
-		mannschaft01.addToKader(spieler01);
-		mannschaft01.addToKader(spieler02);
-		mannschaft01.setTrainer(trainer01);
+
 		mannschaft01.addToSpielListe(spiel01);
+
+		ArrayList<Spieler> testKader = new ArrayList<Spieler>();
 		
-		Mitglied[] mitglieder = {spieler01,spieler02,trainer01,schiri01};
+	
 		
-		for(Mitglied m: mitglieder) {
+		for(int i = 0 ; i<9 ; i++) {
+			mannschaft01.addToKader(new Spieler());
+		}
+		
+		mannschaft01.setKader(testKader);
+		Spieler spieler03 = new Spieler();
+		testKader.add(spieler03);
+		mannschaft01.setKader(testKader);
+		mannschaft01.removeFromKader(6);
+		Spieler spieler04 = new Spieler();
+		mannschaft01.addToKader(spieler04);
+		mannschaft01.removeFromKader(6);	
+		
+		for(int i = 0 ; i<12 ; i++) {
+			mannschaft01.addToKader(new Spieler());
+		}
+		
+		for(Spieler s : mannschaft01.getKader()) {
 			
-			System.out.println(m.getName());
-			System.out.println(m.getTelefonnr());
-			System.out.println(m.getJahresbeitragBezahlt());
+			System.out.println(s.getName());
+			System.out.println(s.getTelefonnr());
+			System.out.println(s.getJahresbeitragBezahlt());
 			
 		}
+		
+		System.out.println(mannschaft01.getKader().size());
 		
 	}
 	

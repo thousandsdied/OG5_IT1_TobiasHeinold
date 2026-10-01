@@ -1,8 +1,8 @@
 public class Spieler extends Mitglied{
 
-	private int trikotnummer;
-	private String position;
-	private Mannschaft mannschaft;
+	protected int trikotnummer;
+	protected String position;
+	protected Mannschaft mannschaft;
 	
 	public int getTrikotnummer() {
 		return trikotnummer;
@@ -23,6 +23,11 @@ public class Spieler extends Mitglied{
 		this.mannschaft = mannschaft;
 	}
 	
-	public Spieler() {super();};
+	public Spieler() {
+		trikotnummer=0;
+		position="";
+		mannschaft=new Mannschaft();
+	}
+	
 	
 }

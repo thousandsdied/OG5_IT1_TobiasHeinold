@@ -1,7 +1,8 @@
 abstract public class Mitglied {
 	
-	private String name,telefonnr;
-	private Boolean jahresbeitragBezahlt;
+	protected String name;
+	protected String telefonnr;
+	protected Boolean jahresbeitragBezahlt;
 	
 	
 	public String getName() {
@@ -23,6 +24,10 @@ abstract public class Mitglied {
 		this.jahresbeitragBezahlt = jahresbeitragBezahlt;
 	}
 	
-
+	public Mitglied() {
+		name="John/Jane Doe";
+		telefonnr="111111111";
+		jahresbeitragBezahlt=false;
+	}
 
 }

@@ -27,6 +27,16 @@ public class Trainer extends Mitglied{
 	public void addToMannschaften(Mannschaft mannschaft) {
 		mannschaften.add(mannschaft);
 	}
-	public Trainer() {mannschaften = new ArrayList<Mannschaft>();};
+	public void removeFromMannschaften(int index) {
+		if(mannschaften.size()>index) {
+			mannschaften.remove(index);
+		}
+		else {
+			System.out.println("So viele Mannschaften trainiert dieser Trainer nicht");
+		}
+	}
+	public Trainer() {
+		mannschaften = new ArrayList<Mannschaft>();
+	};
 	
 }

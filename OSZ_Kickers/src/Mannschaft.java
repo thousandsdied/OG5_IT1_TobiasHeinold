@@ -6,7 +6,14 @@ public class Mannschaft {
 	private ArrayList<Spieler> kader;
 	private Trainer trainer;
 	private ArrayList<Spiel> spielListe;
+	private char spielklasse;
 	
+	public char getSpielklasse() {
+		return spielklasse;
+	}
+	public void setSpielklasse(char spielklasse) {
+		this.spielklasse = spielklasse;
+	}
 	public String getName() {
 		return name;
 	}
@@ -32,7 +39,14 @@ public class Mannschaft {
 		return spielListe;
 	}
 	public void setSpielListe(ArrayList<Spiel> spielListe) {
-		this.spielListe = spielListe;
+		if(spielListe.size()>10 && spielListe.size()<23) {
+			this.spielListe = spielListe;
+		}
+		else {
+			
+			System.out.println("Angegebene Spielerliste ist zu groß oder zu klein");
+			
+		}
 	}
 	public void addToSpielListe(Spiel spiel) {
 		spielListe.add(spiel);

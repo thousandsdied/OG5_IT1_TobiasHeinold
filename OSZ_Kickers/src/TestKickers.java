@@ -4,6 +4,7 @@ public class TestKickers {
 		
 		Mannschaft mannschaft01 = new Mannschaft();
 		mannschaft01.setName("FC Mayern Bünchen");
+		mannschaft01.setSpielklasse('A');
 		
 		Spieler spieler01 = new Spieler();
 		spieler01.setName("Detlef DeSoost");

@@ -19,6 +19,9 @@ public class Mannschaft {
 	public void setKader(ArrayList<Spieler> kader) {
 		this.kader = kader;
 	}
+	public void addToKader(Spieler spieler) {
+		kader.add(spieler);
+	}
 	public Trainer getTrainer() {
 		return trainer;
 	}
@@ -31,7 +34,13 @@ public class Mannschaft {
 	public void setSpielListe(ArrayList<Spiel> spielListe) {
 		this.spielListe = spielListe;
 	}
+	public void addToSpielListe(Spiel spiel) {
+		spielListe.add(spiel);
+	}
 	
-	public Mannschaft() {}
+	public Mannschaft() {
+		kader=new ArrayList<Spieler>();
+		spielListe=new ArrayList<Spiel>();
+	}
 	
 }

@@ -24,7 +24,9 @@ public class Trainer extends Mitglied{
 	public void setMannschaften(ArrayList<Mannschaft> mannschaften) {
 		this.mannschaften = mannschaften;
 	}
-	
-	public Trainer() {};
+	public void addToMannschaften(Mannschaft mannschaft) {
+		mannschaften.add(mannschaft);
+	}
+	public Trainer() {mannschaften = new ArrayList<Mannschaft>();};
 	
 }

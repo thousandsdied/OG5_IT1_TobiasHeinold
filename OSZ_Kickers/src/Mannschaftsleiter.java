@@ -1,13 +1,13 @@
 public class Mannschaftsleiter extends Spieler{
 
-	private Mannschaft mannschaft;
+	private Mannschaft leitendeMannschaft;
 	private double rabatt;
 	
-	public Mannschaft getMannschaft() {
-		return mannschaft;
+	public Mannschaft geLeitendetMannschaft() {
+		return leitendeMannschaft;
 	}
-	public void setMannschaft(Mannschaft mannschaft) {
-		this.mannschaft = mannschaft;
+	public void setLeitendeMannschaft(Mannschaft mannschaft) {
+		this.leitendeMannschaft = mannschaft;
 	}
 	public double getRabatt() {
 		return rabatt;

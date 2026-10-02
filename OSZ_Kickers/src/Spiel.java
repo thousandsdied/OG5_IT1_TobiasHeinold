@@ -2,7 +2,7 @@
 public class Spiel {
 
 	private String heimGast;
-	private String datum;
+	private String datum; //Therotisch könnte man auch Date nehmen
 	private String ergebnis;
 	
 	public String getHeimGast() {
